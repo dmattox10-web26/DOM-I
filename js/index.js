@@ -49,6 +49,7 @@ let footer = document.querySelector('footer')
 
 navItems.forEach((navItem, index) => {
   navItem.textContent = siteContent['nav'][`nav-item-${index + 1}`]
+  navItem.style.color = 'green'
 })
 
 let ctaHeading = cta.querySelector('h1')
@@ -97,3 +98,15 @@ contactEmail.textContent = siteContent['contact']['email']
 
 let footerText = footer.querySelector('p')
 footerText.textContent = siteContent['footer']['copyright']
+
+let nav = document.querySelector('nav')
+let firstNav = document.createElement('a')
+firstNav.textContent = 'first'
+firstNav.style.color = 'green'
+firstNav.href = '#'
+nav.prepend(firstNav)
+let lastNav = document.createElement('a')
+lastNav.textContent = 'last'
+lastNav.style.color = 'green'
+lastNav.href = '#'
+nav.append(lastNav)
