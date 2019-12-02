@@ -85,3 +85,12 @@ let mainContentVisionHeading = mainContent.querySelector('.bottom-content :nth-c
 mainContentVisionHeading.textContent = siteContent['main-content']['vision-h4']
 let mainContentVisionText = mainContent.querySelector('.bottom-content :nth-child(3) > p')
 mainContentVisionText.textContent = siteContent['main-content']['vision-content']
+
+let contactHeading = contact.querySelector('h4')
+contactHeading.textContent = siteContent['contact']['contact-h4']
+let contactAddress = contact.querySelector(':nth-child(2)')
+contactAddress.textContent = siteContent['contact']['address']
+let contactPhone = contact.querySelector(':nth-child(3)')
+contactPhone.textContent = siteContent['contact']['phone']
+let contactEmail = contact.querySelector(':nth-child(4)')
+contactEmail.textContent = siteContent['contact']['email']
