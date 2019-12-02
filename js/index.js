@@ -57,3 +57,31 @@ let ctaButton = cta.querySelector('button')
 ctaButton.textContent = siteContent['cta']['button']
 let ctaImage = cta.querySelector('img')
 ctaImage.src = siteContent['cta']['img-src']
+
+let mainContentFeaturesHeading = mainContent.querySelector('.top-content :nth-child(1) > h4')
+mainContentFeaturesHeading.textContent = siteContent['main-content']['features-h4']
+let mainContentFeaturesText = mainContent.querySelector('.top-content :nth-child(1) > p')
+mainContentFeaturesText.textContent = siteContent['main-content']['features-content']
+
+let mainContentAboutHeading = mainContent.querySelector('.top-content :nth-child(2) > h4')
+mainContentAboutHeading.textContent = siteContent['main-content']['about-h4']
+let mainContentAboutText = mainContent.querySelector('.top-content :nth-child(2) > p')
+mainContentAboutText.textContent = siteContent['main-content']['about-content']
+
+let mainContentImage = mainContent.querySelector('.middle-img')
+mainContentImage.src = siteContent['main-content']['middle-img-src']
+
+let mainContentServicesHeading = mainContent.querySelector('.bottom-content :nth-child(1) > h4')
+mainContentServicesHeading.textContent = siteContent['main-content']['services-h4']
+let mainContentServicesText = mainContent.querySelector('.bottom-content :nth-child(1) > p')
+mainContentServicesText.textContent = siteContent['main-content']['services-content']
+
+let mainContentProductHeading = mainContent.querySelector('.bottom-content :nth-child(2) > h4')
+mainContentProductHeading.textContent = siteContent['main-content']['product-h4']
+let mainContentProductText = mainContent.querySelector('.bottom-content :nth-child(2) > p')
+mainContentProductText.textContent = siteContent['main-content']['product-content']
+
+let mainContentVisionHeading = mainContent.querySelector('.bottom-content :nth-child(3) > h4')
+mainContentVisionHeading.textContent = siteContent['main-content']['vision-h4']
+let mainContentVisionText = mainContent.querySelector('.bottom-content :nth-child(3) > p')
+mainContentVisionText.textContent = siteContent['main-content']['vision-content']
