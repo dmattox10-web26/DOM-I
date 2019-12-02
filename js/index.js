@@ -40,3 +40,73 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navItems = document.querySelectorAll('nav a')
+let cta = document.querySelector('section.cta')
+let mainContent = document.querySelector('section.main-content')
+let contact = document.querySelector('section.contact')
+let footer = document.querySelector('footer')
+
+navItems.forEach((navItem, index) => {
+  navItem.textContent = siteContent['nav'][`nav-item-${index + 1}`]
+  navItem.style.color = 'green'
+})
+
+let ctaHeading = cta.querySelector('h1')
+ctaHeading.textContent = siteContent['cta']['h1']
+let ctaButton = cta.querySelector('button')
+ctaButton.textContent = siteContent['cta']['button']
+let ctaImage = cta.querySelector('img')
+ctaImage.src = siteContent['cta']['img-src']
+
+let mainContentFeaturesHeading = mainContent.querySelector('.top-content :nth-child(1) > h4')
+mainContentFeaturesHeading.textContent = siteContent['main-content']['features-h4']
+let mainContentFeaturesText = mainContent.querySelector('.top-content :nth-child(1) > p')
+mainContentFeaturesText.textContent = siteContent['main-content']['features-content']
+
+let mainContentAboutHeading = mainContent.querySelector('.top-content :nth-child(2) > h4')
+mainContentAboutHeading.textContent = siteContent['main-content']['about-h4']
+let mainContentAboutText = mainContent.querySelector('.top-content :nth-child(2) > p')
+mainContentAboutText.textContent = siteContent['main-content']['about-content']
+
+let mainContentImage = mainContent.querySelector('.middle-img')
+mainContentImage.src = siteContent['main-content']['middle-img-src']
+
+let mainContentServicesHeading = mainContent.querySelector('.bottom-content :nth-child(1) > h4')
+mainContentServicesHeading.textContent = siteContent['main-content']['services-h4']
+let mainContentServicesText = mainContent.querySelector('.bottom-content :nth-child(1) > p')
+mainContentServicesText.textContent = siteContent['main-content']['services-content']
+
+let mainContentProductHeading = mainContent.querySelector('.bottom-content :nth-child(2) > h4')
+mainContentProductHeading.textContent = siteContent['main-content']['product-h4']
+let mainContentProductText = mainContent.querySelector('.bottom-content :nth-child(2) > p')
+mainContentProductText.textContent = siteContent['main-content']['product-content']
+
+let mainContentVisionHeading = mainContent.querySelector('.bottom-content :nth-child(3) > h4')
+mainContentVisionHeading.textContent = siteContent['main-content']['vision-h4']
+let mainContentVisionText = mainContent.querySelector('.bottom-content :nth-child(3) > p')
+mainContentVisionText.textContent = siteContent['main-content']['vision-content']
+
+let contactHeading = contact.querySelector('h4')
+contactHeading.textContent = siteContent['contact']['contact-h4']
+let contactAddress = contact.querySelector(':nth-child(2)')
+contactAddress.textContent = siteContent['contact']['address']
+let contactPhone = contact.querySelector(':nth-child(3)')
+contactPhone.textContent = siteContent['contact']['phone']
+let contactEmail = contact.querySelector(':nth-child(4)')
+contactEmail.textContent = siteContent['contact']['email']
+
+let footerText = footer.querySelector('p')
+footerText.textContent = siteContent['footer']['copyright']
+
+let nav = document.querySelector('nav')
+let firstNav = document.createElement('a')
+firstNav.textContent = 'first'
+firstNav.style.color = 'green'
+firstNav.href = '#'
+nav.prepend(firstNav)
+let lastNav = document.createElement('a')
+lastNav.textContent = 'last'
+lastNav.style.color = 'green'
+lastNav.href = '#'
+nav.append(lastNav)
