@@ -94,3 +94,6 @@ let contactPhone = contact.querySelector(':nth-child(3)')
 contactPhone.textContent = siteContent['contact']['phone']
 let contactEmail = contact.querySelector(':nth-child(4)')
 contactEmail.textContent = siteContent['contact']['email']
+
+let footerText = footer.querySelector('p')
+footerText.textContent = siteContent['footer']['copyright']
